@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #9147ff;
+  --primary-color-hover: rgba(145, 71, 255, 0.75);
+  --bg-color: #0E0E10;
+  --text-color: #EFEFF1;
+  --light-color: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+form {
+  background: rgba(255, 255, 255, 0.03);
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+form img {
+  width: 240px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+div.input {
+  margin-top: 36px;
+  position: relative;
+}
+
+input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 1em;
+}
+
+button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  position: relative;
+  border-bottom: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  transition: background-color 200ms linear;
+  cursor: pointer;
+  text-shadow: 0 0 3px var(--light-color);
+}
+
+button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at center, transparent, transparent);
+  background-size: 1%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: background-size 900ms, opacity 150ms;
+}
+
+button:active::after {
+  background-image: radial-gradient(circle at center, rgba(0,0,0,0.15) 50%, transparent 52%);
+  background-size: 2000%;
+  opacity: 1;
+}
+
+input ~ label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  color: rgba(255, 255, 255, 0.6);
+  transition: .4s;
+  cursor: text;
+}
+
+input:focus ~ label,
+input:valid ~label {
+  transform: translateY(-24px);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}

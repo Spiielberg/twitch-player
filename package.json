@@ -1,0 +1,15 @@
+{
+  "name": "simple-webview",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js",
+    "build-app": "electron-packager --platform=win32 --arch=x64 --icon=assets/icon.ico twitch-payer",
+    "build-installer": "node build_installer.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.4",
+    "electron-wix-msi": "^2.2.0"
+  }
+}
