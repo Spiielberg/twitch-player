@@ -1,10 +1,10 @@
 {
   "name": "simple-webview",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "app.js",
   "scripts": {
     "start": "electron app.js",
-    "build-app": "electron-packager --platform=win32 --arch=x64 --icon=assets/icon.ico twitch-payer",
+    "build-app": "electron-packager ./ --platform=win32 --arch=x64 --icon=assets/icon.ico Twitch-player",
     "build-installer": "node build_installer.js"
   },
   "license": "MIT",
