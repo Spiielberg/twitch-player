@@ -1,6 +1,6 @@
 {
-  "name": "simple-webview",
-  "version": "1.0.1",
+  "name": "twitch-player",
+  "version": "1.0.2",
   "main": "app.js",
   "scripts": {
     "start": "electron app.js",

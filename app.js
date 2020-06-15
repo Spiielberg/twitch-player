@@ -7,8 +7,6 @@ function createWindow () {
   win = new BrowserWindow({
     width: config.width,
     height: config.height,
-    x: config.x,
-    y: config.y,
     darkTheme: true,
     title:config.title,
     webPreferences: {
