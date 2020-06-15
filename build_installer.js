@@ -11,7 +11,7 @@ const msiCreator = new MSICreator({
   exe: 'twitch-player',
   name: 'Twitch Player',
   manufacturer: 'Twitch',
-  version: '1.0.2',
+  version: '1.0.3',
   ui: {
     chooseDirectory: true
   }

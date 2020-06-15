@@ -39,7 +39,7 @@ form {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  animation: fade 500ms;
+  animation: fade 1000ms;
 }
 
 form img {
@@ -146,7 +146,7 @@ input:valid ~label {
 }
 
 .validade-error {
-  animation: vibrate 150ms linear, fade paused;
+  animation: vibrate 100ms linear, fade paused;
   animation-iteration-count: 2;
 }
 
@@ -155,10 +155,10 @@ input:valid ~label {
     transform: translateX(0);
   }
   33% {
-    transform: translateX(-10%);
+    transform: translateX(-5%);
   }
   66% {
-    transform: translateX(10%);
+    transform: translateX(5%);
   }
 }
 
@@ -171,33 +171,65 @@ input:valid ~label {
   height: 40px;
   display: block;
   position: absolute;
-  bottom: -40px;
+  opacity: 0;
 }
 
 @keyframes up1 {
   from {
     opacity: 0;
-    transform: translateY(0);
   }
   50% {
     opacity: 0.2;
+    top: -25%;
   }
   to {
     opacity: 0;
-    transform: translateY(-125vh) rotate(960deg);
+    top: 125%;
+    transform: rotate(960deg);
   }
 }
 
 @keyframes up2 {
   from {
     opacity: 0;
-    transform: translateY(0);
   }
   50% {
     opacity: 0.2;
+    top: -25%;
   }
   to {
     opacity: 0;
-    transform: translateY(-125vh) rotate(-960deg);
+    top: 125%;
+    transform: rotate(-960deg);
+  }
+}
+
+@keyframes down1 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+    top: 125%;
+  }
+  to {
+    opacity: 0;
+    top: -25%;
+    transform: rotate(960deg);
+  }
+}
+
+@keyframes down2 {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+    top: 125%;
+  }
+  to {
+    opacity: 0;
+    top: -25%;
+    transform: rotate(960deg);
   }
 }
