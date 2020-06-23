@@ -1,8 +1,8 @@
 :root {
   --primary-color: #9147ff;
   --primary-color-hover: rgba(145, 71, 255, 0.75);
-  --bg-color: #0E0E10;
-  --text-color: #EFEFF1;
+  --bg-color: #0e0e10;
+  --text-color: #efeff1;
   --light-color: rgba(145, 71, 255, 0.05);
 }
 
@@ -13,7 +13,7 @@
 }
 
 html {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
 }
 
@@ -113,7 +113,11 @@ button::after {
 }
 
 button:active::after {
-  background-image: radial-gradient(circle at center, rgba(0,0,0,0.15) 50%, transparent 52%);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.15) 50%,
+    transparent 52%
+  );
   background-size: 2000%;
   opacity: 1;
 }
@@ -124,12 +128,12 @@ input ~ label {
   top: 16px;
   left: 0;
   color: rgba(255, 255, 255, 0.6);
-  transition: .4s;
+  transition: 0.4s;
   cursor: text;
 }
 
 input:focus ~ label,
-input:valid ~label {
+input:valid ~ label {
   transform: translateY(-24px);
   font-size: 0.8em;
   letter-spacing: 0.1em;
@@ -139,7 +143,8 @@ input:valid ~label {
   from {
     opacity: 0;
     transform: scale(0.9);
-  } to {
+  }
+  to {
     opacity: 1;
     transform: scale(1);
   }
@@ -151,7 +156,8 @@ input:valid ~label {
 }
 
 @keyframes vibrate {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   33% {

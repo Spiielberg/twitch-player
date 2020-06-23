@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Twitch Player</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <form>
-      <img src="assets/Twitch_logo.png" alt="Twitch logo" onclick="openTwitch()" />
+      <img
+        src="assets/Twitch_logo.png"
+        alt="Twitch logo"
+        onclick="openTwitch()"
+      />
       <div class="input">
         <input name="name" type="text" autofocus required spellcheck="false" />
         <label for="name" onclick="forInput()">Live channel</label>
       </div>
       <button type="submit">Open</button>
     </form>
-    <div class="logos">
-    </div>
+    <div class="logos"></div>
   </body>
 </html>
